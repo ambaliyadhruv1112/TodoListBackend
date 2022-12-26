@@ -1,6 +1,6 @@
 import { Schema } from 'mongoose';
 
-import { primaryDatabase } from '../connections';
+import { primaryDatabase } from '../connections/index.js';
 
 const Product = new Schema({
   chemicalName: {

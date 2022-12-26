@@ -1,5 +1,5 @@
-import Product from '../../models/product.model';
-import generateSuccessResponse from '../../utilities/generateResponse';
+import Product from '../../models/product.model.js';
+import generateSuccessResponse from '../../utilities/generateResponse.js';
 
 const createProduct = async (productDetails) => {
   try {

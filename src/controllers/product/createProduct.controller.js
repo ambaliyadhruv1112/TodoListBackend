@@ -1,4 +1,4 @@
-import ProductService from '../../services/product';
+import ProductService from '../../services/product/index.js';
 
 const CreateProductController = (req, res, next) => {
   ProductService.createProduct(req.body)
