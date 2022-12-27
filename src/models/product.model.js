@@ -17,7 +17,6 @@ const Product = new Schema({
   },
   sellerEmail: {
     type: String,
-    unique: true,
     sparse: true,
     lowercase: true,
   },

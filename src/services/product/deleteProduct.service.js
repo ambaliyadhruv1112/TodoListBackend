@@ -1,9 +1,9 @@
-import productModel from '../../models/product.model.js';
+import Product from '../../models/product.model.js';
 import generateSuccessResponse from '../../utilities/generateResponse.js';
 
 const deleteProduct = async (productId) => {
   try {
-    const product = await productModel.findByIdAndDelete({ _id: productId });
+    const product = await Product.findByIdAndDelete({ _id: productId });
 
     if (!product) {
       return Promise.reject('Product not found.');
