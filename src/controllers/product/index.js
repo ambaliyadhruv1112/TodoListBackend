@@ -5,6 +5,7 @@ import getProductController from './getProduct.controller.js';
 import updateProductController from './updateProduct.controller.js';
 import validateRequest from '../../utilities/validateRequest.js';
 import createProductSchema from '../../schema/product/createProduct.schema.js';
+import getSingleProductController from './getSingleProduct.controller.js';
 const router = express.Router();
 
 router
@@ -12,8 +13,8 @@ router
   .get(getProductController)
   .post(validateRequest(createProductSchema), CreateProductController);
 router
-  .route('/:productId')
-  .get(getProductController)
+  .route('/:_id')
+  .get(getSingleProductController)
   .delete(deleteProductController)
   .put(updateProductController);
 

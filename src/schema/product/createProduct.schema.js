@@ -12,7 +12,7 @@ const createProductSchema = {
       }),
     casNumber: Joi.string()
       .required()
-      .pattern(/^([0-9]{2,7})([0-9]{2})[0-9]$/)
+      .pattern(/^([0-9]{2,7})-([0-9]{2})-[0-9]$/)
       .messages({
         message: 'CAS number is a mandatory field, it cannot be empty.',
       }),
